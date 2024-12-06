@@ -2,4 +2,9 @@ from Task2.Button import Button
 
 
 class MacButton(Button):
-    pass
+    def __init__(self):
+        print("Mac button initialized")
+
+    @staticmethod
+    def print():
+        print("Mac button printing")

@@ -14,4 +14,5 @@ class Application(ABC):
         self.checkbox = self.factory.createCheckbox()
 
     def paint(self):
-        self.button.paint()
+        self.checkbox.print()
+        self.button.print()

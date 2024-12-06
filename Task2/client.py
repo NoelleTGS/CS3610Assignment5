@@ -12,3 +12,6 @@ else:
     factory = WinFactory()
 
 app = Application(factory)
+
+app.createUI()
+app.paint()

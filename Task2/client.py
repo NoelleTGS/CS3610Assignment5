@@ -6,7 +6,7 @@ from Task2.WinFactory import WinFactory
 
 os_version = os.name
 
-if os_version == "Mac":
+if os_version == "posix":
     factory = MacFactory()
 else:
     factory = WinFactory()

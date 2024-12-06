@@ -1,13 +1,24 @@
-from abc import ABC, abstractmethod, Document
+from abc import ABC
+from Document import Document
+from ExcelDocument import ExcelDocument
+from PDFDocument import PDFDocument
+from WordDocument import WordDocument
 
-class DocumentCreator(ABC):
+#DocTypes = {'excel': ExcelDocument, 'pdf': PDFDocument, 'word': WordDocument}
 
-    @staticmethod
-    @abstractmethod
+class DocumentCreator():
+
     def factory_method() -> Document:
         pass
 
     @staticmethod
-    @abstractmethod
-    def create_document() -> str:
-        pass
+    def create_document(objType: str) -> Document: #A static method to get a concrete product
+
+        if objType.lower() == 'excel':
+            return ExcelDocument()
+        if objType.lower() == 'pdf':
+             return PDFDocument()
+        if objType.lower() == 'word':
+             return WordDocument()
+        else:
+            return Document()

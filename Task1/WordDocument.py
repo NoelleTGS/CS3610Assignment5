@@ -1,10 +1,10 @@
 import Document
 
 '''
-Word class implements Document interface
+Word class implements document
 '''
-
-class WordDocument(Document):  
+class WordDocument():
+    
     def __init__(self):
         self.__name = "Word Document"
 

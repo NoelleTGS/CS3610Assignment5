@@ -1,10 +1,11 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 
-'''Document interface'''
+'''Document'''
 
 class Document(ABC):
     
-    @staticmethod
-    @abstractmethod
-    def create()-> None: #A static interface method
-        pass
+    def __init__(self):
+        self.__name = "Document"
+
+    def create(self):
+        return f"Creating {self.__name}"

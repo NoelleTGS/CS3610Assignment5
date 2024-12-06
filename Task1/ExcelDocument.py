@@ -1,9 +1,10 @@
 import Document
 
 '''
-Excel Class implements document interface
+Excel Class implements document
 '''
-class ExelDocument(Document):  
+class ExcelDocument():
+    
     def __init__(self):
         self.__name = "Excel Document"
 

@@ -1,10 +1,10 @@
 import Document
 
 '''
-PDF class implements Document interface
+PDF Class implements document
 '''
-
-class PDFDocument(Document):  
+class PDFDocument():
+    
     def __init__(self):
         self.__name = "PDF Document"
 

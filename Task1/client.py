@@ -1,9 +1,10 @@
-from Task1.DocumentCreator import DocumentCreator
+from DocumentCreator import DocumentCreator
 from typing import Type
 
-objNames=['pdf','excel','word']
+doc1 = DocumentCreator.create_document('excel')
+doc2 = DocumentCreator.create_document('pdf')
+doc3 = DocumentCreator.create_document('Word')
 
-for name in objNames:
-    res=DocumentCreator.create_document(name)
-    if res:
-        print(res.objType)
+print(doc1)
+print(doc2)
+print(doc3)

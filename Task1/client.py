@@ -1,5 +1,4 @@
 from DocumentCreator import DocumentCreator
-from typing import Type
 
 doc1 = DocumentCreator.create_document('excel')
 doc2 = DocumentCreator.create_document('pdf')

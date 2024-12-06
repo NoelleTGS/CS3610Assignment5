@@ -6,9 +6,9 @@ from WordDocument import WordDocument
 
 #DocTypes = {'excel': ExcelDocument, 'pdf': PDFDocument, 'word': WordDocument}
 
-class DocumentCreator():
+class DocumentCreator:
 
-    def factory_method() -> Document:
+    def factory_method(self) -> Document:
         pass
 
     @staticmethod

@@ -1,30 +1,25 @@
-from Task3 import IBuilder
-from Task3.Car import Car
+from Builder import Builder
+from Car import Car
 
-
-class CarBuilder(IBuilder):
-    def __init__(self) -> None:
-        self.__product = None
+# Concrete Builder for Car
+class CarBuilder(Builder):
+    def __init__(self):
         self.reset()
 
-    def reset(self) -> None:
-        print("We have our initial Product")
-        self.__product = Car()
+    def reset(self):
+        self.car = Car()
 
-    @property
-    def product(self) -> Car:
-        currentProduct = self.__product
-        self.reset()
-        return currentProduct
+    def setType(self, type: str):
+        self.car.type = type
 
-    def setSeats(self) -> None:
-        pass
+    def setSeats(self, seats: int):
+        self.car.seats = seats
 
-    def setEngine(self) -> None:
-        pass
+    def setEngine(self, engine: str):
+        self.car.engine = engine
 
-    def setTripComputer(self) -> None:
-        pass
+    def setGPS(self, gps: bool):
+        self.car.gps = gps
 
-    def setGPS(self) -> None:
-        pass
+    def getResult(self):
+        return self.car

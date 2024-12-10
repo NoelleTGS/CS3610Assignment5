@@ -1,12 +1,5 @@
-import Document
+from Document import Document
 
-'''
-Excel Class implements document
-'''
-class ExcelDocument():
-    
-    def __init__(self):
-        self.__name = "Excel Document"
-
+class ExcelDocument(Document):
     def create(self):
-        return f"Creating {self.__name}"
+        print(f"Excel document created")

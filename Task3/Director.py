@@ -1,26 +1,23 @@
-from typing import Type
-
-from Task3 import IBuilder
+from Builder import Builder
 
 
 class Director:
-    def __init__(self) -> None:
-        self.__builder = None
+    def __init__(self):
+        self.builder = None
 
-    @property
-    def builder(self) -> IBuilder:
-        return self.__builder
+    def set_builder(self, builder: Builder):
+        self.builder = builder
 
-    @builder.setter
-    def builder(self, builder: Type[IBuilder]) -> None:
-        self.__builder = builder
+    def makeSportsCar(self):
+        self.builder.reset()
+        self.builder.setType("Sports Car")
+        self.builder.setSeats(2)
+        self.builder.setEngine("V8")
+        self.builder.setGPS(True)
 
-    def makeSUV(self) -> None:
-        pass
-
-    def makeSportsCar(self) -> None:
-        builder.reset()
-        builder.setSeats(2)
-        builder.setEngine(SportEngine())
-        builder.setTripComputer()
-        builder.setGPS()
+    def makeSUV(self):
+        self.builder.reset()
+        self.builder.setType("SUV")
+        self.builder.setSeats(5)
+        self.builder.setEngine("V6")
+        self.builder.setGPS(False)

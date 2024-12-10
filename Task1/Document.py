@@ -1,11 +1,6 @@
-from abc import ABC
-
-'''Document'''
+from abc import ABC, abstractmethod
 
 class Document(ABC):
-    
-    def __init__(self):
-        self.__name = "Document"
-
+    @abstractmethod
     def create(self):
-        return f"Creating {self.__name}"
+        pass

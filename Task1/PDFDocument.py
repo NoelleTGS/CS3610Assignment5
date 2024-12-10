@@ -1,12 +1,5 @@
-import Document
+from Document import Document
 
-'''
-PDF Class implements document
-'''
-class PDFDocument():
-    
-    def __init__(self):
-        self.__name = "PDF Document"
-
+class PDFDocument(Document):
     def create(self):
-        return f"Creating {self.__name}"
+        print("PDF document created")

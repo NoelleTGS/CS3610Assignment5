@@ -1,12 +1,5 @@
-import Document
+from Document import Document
 
-'''
-Word class implements document
-'''
-class WordDocument():
-    
-    def __init__(self):
-        self.__name = "Word Document"
-
+class WordDocument(Document):
     def create(self):
-        return f"Creating {self.__name}"
+        print("Word document created")

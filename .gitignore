@@ -1,2 +1,5 @@
 /.venv/
 /.idea/
+/Task1/__pycache__/
+/Task2/__pycache__/
+/Task3/__pycache__/
